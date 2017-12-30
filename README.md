@@ -19,7 +19,7 @@ For rig builders with different hardware specs, check the `post-install.sh` file
 
 ## Unattended installation
 
-Though this is still a work in progress, this is a major step forward in locking down and fully automating installation of the software required to mine Ethereum out of the box. Once configured, mining is as easy as typing:
+Though this is still a work in progress, it is a major step forward in locking down and fully automating installation of the software required to mine Ethereum out of the box. Once configured, mining is as easy as typing:
 
 ```
 ./go.sh
