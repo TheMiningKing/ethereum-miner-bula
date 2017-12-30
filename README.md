@@ -3,15 +3,23 @@ ethereum-miner-bula
 
 Find precise hardware specs and BIOS settings on the [_bula_ 6x RX580 Ethereum mining rig](https://theminingking.com/blog/2017/12/16/Hello-Bula-6-GPU-Ethereum-Rig/).
 
-- Ubuntu Server 16.04.3
+bula is currently mining on [Dwarfpool](http://dwarfpool.com/eth/address/?wallet=7e5533116dbd23b113d3288aacbf4d2122f88ad3).
+
+
+## The software
+
+For rig builders with different hardware specs, check the `post-install.sh` file. This will show you the steps required to install the following critical Ethereum mining software on Ubuntu Server 16.04.3:
+
 - Linux kernel v4.14
 - AMDGPU-PRO 17.40
 - ethereum via apt
 - ethminer from source
 
-bula is currently mining on [Dwarfpool](http://dwarfpool.com/eth/address/?wallet=7e5533116dbd23b113d3288aacbf4d2122f88ad3).
+`post-install.sh` really is the heart of this repository. The steps therein get the software up and running. If you wish to make a fully unattended installer, continue reading.
 
-Though this is still a work in progress, I intend to lockdown and fully automate installation of the software required to mine Ethereum out of the box. Once configured, mining is as easy as typing:
+## Unattended installation
+
+Though this is still a work in progress, this is a major step forward in locking down and fully automating installation of the software required to mine Ethereum out of the box. Once configured, mining is as easy as typing:
 
 ```
 ./go.sh
