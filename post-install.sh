@@ -97,7 +97,8 @@ cd /home/$USERNAME
 wget --referer=http://support.amd.com https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz
 tar -xvf amdgpu-pro-17.40-492261.tar.xz
 cd amdgpu-pro-17.40-492261
-./amdgpu-pro-install -y --compute
+#./amdgpu-pro-install -y --compute
+./amdgpu-pro-install -y
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=""/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi amdgpu.vm_fragment_size=9"/g' /etc/default/grub
 update-grub
 reboot
@@ -108,14 +109,14 @@ reboot
 #############################################
 ############# rocm-amdgpu-pro ###############
 #############################################
-echo "Installing rocm-amdgpu-pro"
-cd /home/$USERNAME
-wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
-sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
-apt update
-apt install -y rocm-amdgpu-pro
-echo 'export LLVM_BIN=/opt/amdgpu-pro/bin' | sudo tee /etc/profile.d/amdgpu-pro.sh
-reboot
+#echo "Installing rocm-amdgpu-pro"
+#cd /home/$USERNAME
+#wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
+#sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
+#apt update
+#apt install -y rocm-amdgpu-pro
+#echo 'export LLVM_BIN=/opt/amdgpu-pro/bin' | sudo tee /etc/profile.d/amdgpu-pro.sh
+#reboot
 
 # ~11 minutes
 
@@ -169,6 +170,7 @@ echo "Fetching pool scripts"
 cd /home/$USERNAME
 wget https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/scripts/geth-start.sh
 wget https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/scripts/dwarfpool-start.sh
+wget https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/scripts/2miners-start.sh
 wget https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/scripts/go.sh
 chmod 774 *.sh
 
