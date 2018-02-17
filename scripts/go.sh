@@ -18,4 +18,5 @@
 # `Ctrl-A-D` to put process in background
 #
 
-./dwarfpool-start.sh
+#./dwarfpool-start.sh
+./2miners-start.sh

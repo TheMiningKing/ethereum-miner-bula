@@ -3,7 +3,7 @@ ethereum-miner-bula
 
 Find precise hardware specs and BIOS settings on the [_bula_ 6x RX580 Ethereum mining rig](https://theminingking.com/blog/2017/12/16/Hello-Bula-6-GPU-Ethereum-Rig/).
 
-bula is currently mining on [Dwarfpool](http://dwarfpool.com/eth/address/?wallet=7e5533116dbd23b113d3288aacbf4d2122f88ad3).
+bula is currently mining on [2Miners](https://eth.2miners.com/en/account/0x7e5533116dbd23b113d3288aacbf4d2122f88ad3).
 
 
 ## The software
@@ -167,25 +167,19 @@ At this point, you could simply type:
 
 and your rig would start submitting shares on behalf of my wallet. You probably want the shares to be credited to your wallet ([though feel free to kick some change my way](https://etherscan.io/address/0xd24def0856636050cf891befc0fa69ecf96c160b)).
 
-As it stands, everything is set up to join Dwarfpool and start mining. There are four scripts of which you need to be aware on your new installation:
+As it stands, everything is set up to join 2Miners and start mining. Relevant configuration files include:
 
 - `~/go.sh`
-- `~/dwarfpool-start.sh`
+- `~/2miners-start.sh`
 - `~/geth-start.sh`
-- `~/eth-pool/eth-proxy.conf`
 
 ### geth-start.sh
 
 Start the Ethereum node. This isn't absolutely necessary, though I find an improvement in my hashrate when it is running.
 
+### 2miners-start.sh
 
-### dwarfpool-start.sh
-
-There are a bunch of examples on how to connect to Dwarfpool. Really, just make sure you change your wallet address otherwise you'll be mining for me.
-
-### ~/eth-pool/eth-proxy.conf
-
-This is a Dwarfpool-heavy configuration. `eth-pool` is their stratum mining proxy. The file itself is well documented. I'll leave it to you to set your wallet address, et al.
+Make sure you change your wallet address otherwise you'll be mining for me.
 
 ### go.sh
 
@@ -195,7 +189,22 @@ This just runs all the required scripts:
 ./go.sh
 ```
 
-Take a peak inside and you'll see calls to `./geth-start.sh` and `./dwarfpool-start.sh`.
+Take a peak inside and you'll see calls to `./geth-start.sh` and `./2miners-start.sh`.
+
+## Dwarfpool
+
+If Dwarfpool is more your style, these are scripts of which you need to be aware:
+
+- `~/dwarfpool-start.sh`
+- `~/eth-pool/eth-proxy.conf`
+
+### dwarfpool-start.sh
+
+As above, make sure you change your wallet address.
+
+### ~/eth-pool/eth-proxy.conf
+
+Not sure if this is absolutely necessary for stratum mining on Dwarfpool, but `eth-pool` is their recommended stratum mining proxy. The file itself is well documented. I'll leave it to you to set your wallet address, etc.
 
 ## Contribute?
 
