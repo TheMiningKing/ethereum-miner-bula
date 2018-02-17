@@ -128,8 +128,7 @@ sudo fdisk -l
 sudo dd if=/home/daniel/test/myInstaller/custom-ubuntu-http.iso of=/dev/sde
 ```
 
-At this point, you should have a working, bootable installation CD. I usually only attach one GPU the motherboard until installation is complete. After that, attach them one at a time (between reboots) to ensure all are working properly.
-
+At this point, you should have a working, bootable installation CD. I usually only attach one GPU to the motherboard until installation is complete. After that, attach them one at a time (between reboots) to ensure all are working properly.
 
 ## Login
 
