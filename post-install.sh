@@ -5,10 +5,10 @@
 ###########################################
 HOSTNAME='bula'
 USERNAME='miner'
-IPADDRESS='192.168.2.9'
-NETMASK='255.255.240.0'
-GATEWAY='192.168.2.1'
-NAMESERVER='192.168.2.1'
+#IPADDRESS='192.168.2.9'
+#NETMASK='255.255.240.0'
+#GATEWAY='192.168.2.1'
+#NAMESERVER='192.168.2.1'
 #PACKAGES='htop nano sudo python-minimal vim rsync dnsutils less ntp'
 PACKAGES='xz-utils screen git'
 
