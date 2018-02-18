@@ -25,7 +25,7 @@ PACKAGES='xz-utils screen git xfce4'
 # dpkg -i *.deb
 # reboot
 
-# echo "Installing kernel 4.10"
+# echo "Installing kernel 4.10.17"
 # cd /tmp
 # wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10.17/linux-headers-4.10.17-041017_4.10.17-041017.201705201051_all.deb
 # wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10.17/linux-headers-4.10.17-041017-generic_4.10.17-041017.201705201051_amd64.deb
