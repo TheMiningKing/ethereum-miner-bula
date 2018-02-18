@@ -121,10 +121,16 @@ cd .. # or `cd ~/myInstaller`
 fdisk -l custom-ubuntu-http.iso
 ```
 
-Write to USB drive:
+Plug, unplug USB key to determine mount point using:
 
 ```
 sudo fdisk -l
+```
+
+Write to USB drive:
+
+```
+umount /dev/sde
 sudo dd if=/home/daniel/test/myInstaller/custom-ubuntu-http.iso of=/dev/sde
 ```
 
@@ -132,12 +138,12 @@ At this point, you should have a working, bootable installation CD. I usually on
 
 ## Login
 
-Your username is `miner` and your password is `secret`. Assuming all went well, your rig is rigged to run on `192.168.2.9`.
+Your username is `miner` and your password is `secret`. Assuming all went well, your rig is rigged to run somewhere on your local network`.
 
 E.g.,
 
 ```
-ssh miner@192.168.2.9
+ssh miner@192.168.1.5
 ```
 
 ## A BUG!
