@@ -34,12 +34,17 @@ PACKAGES='xz-utils screen git xfce4'
 # reboot
 
 # echo "Installing kernel 4.15"
+# cd /tmp
+# wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-headers-4.10.0-041000_4.10.0-041000.201702191831_all.deb
+# wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-headers-4.10.0-041000-generic_4.10.0-041000.201702191831_amd64.deb
+# wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-image-4.10.0-041000-generic_4.10.0-041000.201702191831_amd64.deb
+# dpkg -i *.deb
+# reboot
+
+# echo "Installing kernel 4.10"
 cd /tmp
-#wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.4/linux-headers-4.15.4-041504_4.15.4-041504.201802162207_all.deb 
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-headers-4.10.0-041000_4.10.0-041000.201702191831_all.deb
-#wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.4/linux-headers-4.15.4-041504-generic_4.15.4-041504.201802162207_amd64.deb
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-headers-4.10.0-041000-generic_4.10.0-041000.201702191831_amd64.deb
-#wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.4/linux-image-4.15.4-041504-generic_4.15.4-041504.201802162207_amd64.deb
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10/linux-image-4.10.0-041000-generic_4.10.0-041000.201702191831_amd64.deb
 dpkg -i *.deb
 reboot
