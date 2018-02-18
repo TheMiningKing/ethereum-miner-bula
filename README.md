@@ -147,20 +147,20 @@ _Grrrrrrr!_ I attempt to compile `ethminer` from source in `post-install.sh`. At
 
 ### Ethminer installation
 
-Doesn't work in `post-install.sh` for some reason. Pull requests welcome...
+The `ethminer` build doesn't work in `post-install.sh` for some reason. Execute this one time after initial system setup:
 
 ```
-cd ~/ethminer/build
-cmake ..
-cmake --build .
-sudo make install
+sudo ./ethminer-install.sh
 ```
+
+Pull requests welcome...
 
 ## Configure
 
 At this point, you could simply type:
 
 ```
+cd ~
 ./go.sh
 ```
 
