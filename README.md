@@ -8,9 +8,9 @@ bula is currently mining on [2Miners](https://eth.2miners.com/en/account/0x7e553
 
 ## The software
 
-For rig builders with different hardware specs, check the `post-install.sh` file. This will show you the steps required to install the following critical Ethereum mining software on Ubuntu Server 16.04.3:
+For rig builders with different hardware specs, check the `post-install.sh` file. This will show you the steps required to install the following critical Ethereum mining software on Ubuntu Server 16.04.2:
 
-- Linux kernel v4.14
+- Linux kernel v4.10
 - AMDGPU-PRO 17.40
 - ethereum via apt
 - ethminer from source
@@ -48,13 +48,13 @@ mkdir myInstaller && cd myInstaller
 Download the desired Ubuntu 16.04 image:
 
 ```
-wget http://releases.ubuntu.com/16.04/ubuntu-16.04.3-server-amd64.iso
+wget http://old-releases.ubuntu.com/releases/16.04.2/ubuntu-16.04.2-server-amd64.iso
 ```
 
 This is an unattended install, so we need to set installation parameters. Use `xorriso` to extract the files from the ISO:
 
 ```
-xorriso -osirrox on -indev ubuntu-16.04.3-server-amd64.iso -extract / custom-iso
+xorriso -osirrox on -indev ubuntu-16.04.2-server-amd64.iso -extract / custom-iso
 ```
 
 Now open the `grub.cfg` file with your favourite editor (mine is `vim`!):
@@ -104,7 +104,7 @@ Obtain isohdpfx.bin for hybrid ISO:
 
 ```
 cd ../
-sudo dd if=ubuntu-16.04.3-server-amd64.iso bs=512 count=1 of=custom-iso/isolinux/isohdpfx.bin
+sudo dd if=ubuntu-16.04.2-server-amd64.iso bs=512 count=1 of=custom-iso/isolinux/isohdpfx.bin
 ```
 
 Create new ISO:
