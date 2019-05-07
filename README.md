@@ -78,9 +78,11 @@ set timeout=1
 set menu_color_normal=white/black
 set menu_color_highlight=black/light-gray
 
+#debian-installer/allow_unauthenticated_ssl=true
+
 menuentry "Mine Ethereum with the Mining King" {
   set gfxpayload=keep
-  linux /install/vmlinuz gfxpayload=800x600x16,800x600 hostname=ubuntu16-04 --- auto=true url=https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/preseed.cfg quiet
+  linux /install/vmlinuz gfxpayload=800x600x16,800x600 hostname=ubuntu16-04 --- auto=true debian-installer/allow_unauthenticated_ssl=true url=https://raw.githubusercontent.com/TheMiningKing/ethereum-miner-bula/master/preseed.cfg quiet
   initrd  /install/initrd.gz
 }
 ```
