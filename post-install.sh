@@ -102,9 +102,10 @@ reboot
 # 
 echo "Installing ethminer"
 cd /home/$USERNAME
-apt install -y cmake mesa-common-dev
+apt install -y cmake mesa-common-dev libdbus-1-dev
 git clone https://github.com/ethereum-mining/ethminer.git
 cd ethminer
+git submodule update --init --recursive
 mkdir build; cd build
 cmake ..
 cmake --build .
