@@ -107,7 +107,7 @@ git clone https://github.com/ethereum-mining/ethminer.git
 cd ethminer
 git submodule update --init --recursive
 mkdir build; cd build
-cmake ..
+cmake .. -DETHASHCUDA=OFF
 cmake --build .
 make install
 
